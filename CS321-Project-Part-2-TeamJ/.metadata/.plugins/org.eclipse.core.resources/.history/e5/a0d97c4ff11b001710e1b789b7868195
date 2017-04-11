@@ -1,0 +1,20 @@
+// Author: Jennifer Berry
+import java.util.*;
+
+public class Users {
+	private Vector <User> users;
+	public Users(){
+		Vector <User> users = new Vector <User>(50);
+		users.add(new User("John Coan"));
+		users.add(new User("Jennifer Berry"));
+		users.add(new User("John Clay"));
+	}
+	public void printAll(){
+		Iterator<User> itr = users.iterator();
+		do{
+			System.out.println(itr.next());
+	   
+		}while(itr.hasNext());
+	}
+	
+}

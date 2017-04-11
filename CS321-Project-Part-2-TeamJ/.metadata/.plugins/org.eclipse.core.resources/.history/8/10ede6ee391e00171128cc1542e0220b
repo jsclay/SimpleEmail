@@ -1,0 +1,54 @@
+/**
+ * This class serves as the controller for the main GUI
+ * 
+ * ------------------------------------------------
+ * Also currently holds the main, making this the
+ * entry point of the program.
+ * ------------------------------------------------
+ * 
+ * @author John S. Clay
+ *
+ */
+public class SimpleEmail 
+{
+	private int m_currentIndex; //holds the index of the currently selected item in the list box
+	
+	public static void main(String[] args) 
+	{
+		SimpleEmail email = new SimpleEmail();
+	}
+	
+	public SimpleEmail()
+	{
+		//member field initialization 
+		m_currentIndex = -1; //we don't have anything in list box currently selected
+		
+		//Set up GUI
+		GUI gui = new GUI(this);   //
+		Users usersTester = new Users();
+		//usersTester.printAll();
+	}
+	
+	/**
+	 * Sets the index of the currently selected item of the list box 
+	 * 
+	 * @param index zero-based position of the selected item in list box
+	 */
+	protected void setCurrentIndex(int index)
+	{
+		m_currentIndex = index;
+	}
+	
+	/**
+	 * Gets the index of the currently selected item of the list box
+	 * 
+	 * ----------------------------------
+	 * TODO: add a check to ensure current index is not still -1;
+	 * ----------------------------------
+	 */
+	public int getCurrentIndex()
+	{
+		return m_currentIndex;
+	}
+
+}

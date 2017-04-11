@@ -1,0 +1,94 @@
+
+/**
+ * This class functions as the GUI for the simple email program.
+ *
+ * @Author  John S. Clay
+ */
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.LayoutManager;
+import java.awt.Panel;
+
+import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+
+public class GUI {
+	public GUI(){
+		//Account combo box
+				String[] accountComboItems = {"Account", "Add Account", "Delete Account" };
+				JComboBox accountCombo = new JComboBox(accountComboItems);
+				
+				//User combo box
+				String[] userComboItems = {"User", "Add User", "Delete User" };
+				JComboBox userCombo = new JComboBox(userComboItems);
+				
+				//frame
+				JFrame frame = new JFrame();
+				frame.setSize(500, 500);
+				
+				//menu bar
+				JMenuBar menuBar = new JMenuBar();
+				menuBar.add(accountCombo);
+				menuBar.add(userCombo);
+				menuBar.setVisible(true);
+				
+				//panels
+					//panelNorth
+					JPanel panelNorth = new JPanel();
+					//panelWest
+					JPanel panelWest = new JPanel();
+					//panelEast
+					JPanel panelEast = new JPanel();
+				//buttons	
+					//button: "Compose"
+					JButton btnCompose = new JButton();
+					btnCompose.setText("Compose");
+					panelNorth.add(btnCompose);
+					//button: "Reply"
+					JButton btnReply = new JButton();
+					btnReply.setText("Reply");
+					panelNorth.add(btnReply);
+					//button: "Send"
+					JButton btnSend = new JButton();
+					btnSend.setText("Send");
+					panelNorth.add(btnSend);
+					//button: "Remove"
+					JButton btnRemove = new JButton();
+					btnRemove.setText("Remove");
+					panelNorth.add(btnRemove);
+				
+				//tree
+					//root
+					DefaultMutableTreeNode simpleEmail = new DefaultMutableTreeNode("Simple Email");
+					//children
+					DefaultMutableTreeNode users = new DefaultMutableTreeNode("Users");
+					DefaultMutableTreeNode defaultUser1 = new DefaultMutableTreeNode("Jen");
+					DefaultMutableTreeNode defaultUser2 = new DefaultMutableTreeNode("John");
+					DefaultMutableTreeNode localSite1 = new DefaultMutableTreeNode("Local Site");
+					DefaultMutableTreeNode remoteSite1 = new DefaultMutableTreeNode("Remote Site");
+					DefaultMutableTreeNode localSite2 = new DefaultMutableTreeNode("Local Site");
+					DefaultMutableTreeNode remoteSite2 = new DefaultMutableTreeNode("Remote Site");
+					DefaultMutableTreeNode account = new DefaultMutableTreeNode("Account");
+					
+					simpleEmail.add(users);
+					users.add(defaultUser1);
+					users.add(defaultUser2);
+					defaultUser1.add(localSite1);
+					defaultUser1.add(remoteSite1);
+					defaultUser2.add(localSite2);
+					defaultUser2.add(remoteSite2);
+					
+					
+					JTree tree = new JTree(simpleEmail);
+					panelWest.add(tree);
+				
+				//Add panels to frame
+				frame.add(menuBar, BorderLayout.NORTH);
+				frame.add(panelNorth, BorderLayout.CENTER);
+				frame.add(panelWest, BorderLayout.WEST);
+				
+				frame.setVisible(true);
+	}
+
+}
+

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>22</y>
+      <w>231</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>*SimpleEmail*
+{Controller}
+--
+--
+*Responsibilities*
+-- Controlls GUI and Users
+--
+Methods
+-- updateState</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>2112</y>
+      <w>231</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>*Email*
+{Some Properties}
+--
+--
+*Fields*
+-- subject
+-- message
+-- timeStamp
+-- sender
+-- recipient
+-- flagType
+*Methods*
+-- getMessage
+-- setMessage
+-- getTitle
+-- setTitle
+-- getTimestamp
+-- setTimestamp
+-- getRecipient
+-- setRecipient</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>1837</y>
+      <w>231</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>*SentBox*
+{Some Properties}
+--
+--
+*Fields*
+-- flagType
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>825</x>
+      <y>1837</y>
+      <w>231</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>*TrashBox*
+{Some Properties}
+--
+--
+*Fields*
+-- flagType
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>363</x>
+      <y>1936</y>
+      <w>308</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>649</x>
+      <y>1936</y>
+      <w>33</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>1936</y>
+      <w>286</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>1210</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>*Account*
+
+--
+--
+*Fields*
+-- accountName
+-
+*Methods*
+-- selectMailbox</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>869</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>*Sites*
+ 
+--
+--
+*Fields*
+-- siteName
+-- accountList&lt;Account&gt;
+--
+*Methods*
+-- addAccount
+-- selectAccount
+-- deleteAccount</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>132</x>
+      <y>66</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>*UI*
+
+--
+--
+Responsibilities
+-- GUI
+-- button click handling</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>264</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>*Users*
+
+--
+--
+*Fields*
+-- userList&lt;User&gt;
+-- siteList&lt;Sites&gt;
+--
+*Methods*
+-- createUser</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>583</y>
+      <w>231</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>*User*
+
+--
+--
+*Fields*
+-- username
+-- localSite
+-- remoteSite</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>1276</y>
+      <w>231</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>*Mailbox*
+{dummy methods}
+--
+--
+*Methods*
+-- composeEmail
+-- deleteEmail
+-- moveEmail
+-- displayMessages</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>1837</y>
+      <w>231</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>*Inbox*
+{Some Properties}
+--
+--
+*Fields*
+-- flagType
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>187</y>
+      <w>33</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>462</y>
+      <w>33</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>748</y>
+      <w>33</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>1067</y>
+      <w>33</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>1408</y>
+      <w>374</w>
+      <h>451</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>320.0;10.0;10.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>1441</y>
+      <w>594</w>
+      <h>418</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;520.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>1441</y>
+      <w>308</w>
+      <h>418</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>363</x>
+      <y>1441</y>
+      <w>44</w>
+      <h>418</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>682</x>
+      <y>1408</y>
+      <w>286</w>
+      <h>451</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;240.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>1408</y>
+      <w>33</w>
+      <h>451</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>935</x>
+      <y>77</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>*State*
+{static}
+--
+--
+enum state
+
+*Fields*
+-- currentState</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>759</x>
+      <y>99</y>
+      <w>198</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>99</y>
+      <w>209</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+</diagram>

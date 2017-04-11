@@ -1,0 +1,9 @@
+// Author: John Clay
+public class SimpleEmail {
+	public static void main(String[] args) 
+	{
+		GUI gui = new GUI();
+		
+	}
+
+}

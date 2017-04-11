@@ -1,0 +1,12 @@
+// Author: Jennifer Berry
+public class User {
+	private String userName;
+	//Constructor
+	public User(String s){
+		userName = s;
+	}
+	//Prints the user name
+	public void showUserName(){
+		System.out.println(userName);
+	}
+}

@@ -1,0 +1,7 @@
+// Author: John Coan
+public class Account {
+	private String accountName;
+	public Account (String s){
+		accountName = s;
+	}
+}

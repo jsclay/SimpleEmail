@@ -1,0 +1,15 @@
+// Author: John Clay
+public class SimpleEmail {
+	public static void main(String[] args) 
+	{
+		GUI gui = new GUI();
+		Users usersTester = new Users();
+		//usersTester.printAll();
+		Site localSite = new Site("Local");
+		Site remoteSite = new Site("Remote");
+		Account jvc = new Account("JVC");
+		Account other = new Account("RandomAccount");
+		
+	}
+
+}

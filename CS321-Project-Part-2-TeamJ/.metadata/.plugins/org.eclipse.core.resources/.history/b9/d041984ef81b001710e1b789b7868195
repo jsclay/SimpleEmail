@@ -1,0 +1,8 @@
+// Author: Jennifer Berry
+public class Site {
+	private String siteName;
+	//Constructor
+	public Site(String s){
+		siteName = s;
+	}
+}

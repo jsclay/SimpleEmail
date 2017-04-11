@@ -1,0 +1,16 @@
+// Author: John Coan
+public class Account {
+	private String accountName;
+	//Constructor
+	public Account (String s){
+		accountName = s;
+		Inbox in = new Inbox();
+		SentBox sent = new SentBox();
+		TrashBox trash = new TrashBox();
+	}
+	
+	//method to select account
+	public void selectAccount(){
+		
+	}
+}

@@ -1,0 +1,4 @@
+// Author: John Clay
+public class SentBox implements Mailbox {
+
+}

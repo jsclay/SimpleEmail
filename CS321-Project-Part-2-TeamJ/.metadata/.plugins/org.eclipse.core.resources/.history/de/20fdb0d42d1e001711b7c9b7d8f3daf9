@@ -1,0 +1,18 @@
+import GUI.GUI;
+
+/**
+ * This class serves as the controller for the main GUI
+ * 
+ * @author John S. Clay
+ *
+ */
+public class SimpleEmail {
+	public static void main(String[] args) 
+	{
+		GUI gui = new GUI();
+		Users usersTester = new Users();
+		//usersTester.printAll();
+		
+	}
+
+}

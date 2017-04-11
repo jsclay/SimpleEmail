@@ -1,0 +1,4 @@
+// Author: John Coan
+public class Inbox implements Mailbox {
+
+}

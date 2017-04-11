@@ -1,0 +1,18 @@
+// Author: Jennifer Berry
+public class User {
+	private String userName;
+	//Constructor
+	public User(String s){
+		userName = s;
+		Site localSite = new Site("Local");
+		Site remoteSite = new Site("Remote");
+		Account jvc = new Account("JVC");
+		Account other = new Account("RandomAccount");
+		localSite.addAccount(jvc);
+		remoteSite.addAccount(other);
+	}
+	//Prints the user name
+	public void showUserName(){
+		System.out.println(userName);
+	}
+}
