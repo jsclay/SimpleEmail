@@ -1,0 +1,20 @@
+package GUI;
+
+/**
+ * Controller for the message GUI
+ * 
+ * @author John S. Clay
+ *
+ */
+public class MessageGUIController 
+{
+	public static void main(String[] args) 
+	{
+		MessageGUIController controller = new MessageGUIController();
+	}
+	
+	public MessageGUIController()
+	{
+		MessageGUI gui = new MessageGUI(this);
+	}
+}

@@ -1,5 +1,7 @@
 package GUI;
 import Email.Users;
+
+import javax.swing.DefaultListModel;
 import javax.swing.ListModel;
 
 import Email.Users;
@@ -18,7 +20,7 @@ import Email.Users;
 public class SimpleEmail 
 {
 	private int m_currentIndex; //holds the index of the currently selected item in the list box
-	private ListModel m_listModel; //holds the things to display in the list box.
+	private DefaultListModel m_listModel; //holds the things to display in the list box.
 	
 	public static void main(String[] args) 
 	{
@@ -71,7 +73,7 @@ public class SimpleEmail
 	 * list box model, call the get function, and perform your updates on the 
 	 * returned object.)
 	 */
-	public void setListBoxModel(ListModel model)
+	public void setListBoxModel(DefaultListModel model)
 	{
 		m_listModel = model;
 	}
@@ -80,7 +82,7 @@ public class SimpleEmail
 	 * Gets the model from the list box. The model is what actually
 	 * holds what is to be displayed in the list box
 	 */
-	public ListModel getListBoxModel()
+	public DefaultListModel getListBoxModel()
 	{
 		return m_listModel;
 	}

@@ -1,0 +1,12 @@
+package GUI;
+
+/**
+ * GUI for the message box
+ * 
+ * @author John S. Clay
+ *
+ */
+public class MessageGUI 
+{
+	//frame
+}

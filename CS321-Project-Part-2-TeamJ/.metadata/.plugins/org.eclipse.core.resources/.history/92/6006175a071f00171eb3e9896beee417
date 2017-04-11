@@ -1,0 +1,12 @@
+package GUI;
+
+/**
+ * Controller for the message GUI
+ * 
+ * @author John S. Clay
+ *
+ */
+public class MessageGUIController 
+{
+	
+}

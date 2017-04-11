@@ -1,0 +1,26 @@
+package GUI;
+
+import javax.swing.JFrame;
+
+/**
+ * GUI for the message box
+ * 
+ * @author John S. Clay
+ *
+ */
+public class MessageGUI 
+{
+	private MessageGUIController m_controller;
+	
+	public MessageGUI(MessageGUIController controller)
+	{
+		//set up the controller
+		m_controller = controller;
+		
+		//frame
+		JFrame frame = new JFrame();
+		frame.setSize(500, 500);
+		
+		
+	}
+}

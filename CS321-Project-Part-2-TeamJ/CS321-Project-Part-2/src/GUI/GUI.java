@@ -19,7 +19,8 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 
-public class GUI{
+public class GUI
+{
 	private SimpleEmail m_controller;
 	
 	public GUI(SimpleEmail controller){
@@ -75,7 +76,8 @@ public class GUI{
 					panelTopEast.add(btnRemove);
 					
 					//Bottom of the east panel: holds the list box
-					JList list = new JList();
+					DefaultListModel listModel = new DefaultListModel();
+					JList list = new JList(listModel);
 					list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 					list.setLayoutOrientation(JList.VERTICAL);
 					list.setVisibleRowCount(10);
@@ -129,7 +131,7 @@ public class GUI{
 			
 				
 			//pass list box model to controller
-				m_controller.setListBoxModel(list.getModel());
+				m_controller.setListBoxModel((DefaultListModel)list.getModel());
 				
 			//Set up listeners 
 				//list box listener
