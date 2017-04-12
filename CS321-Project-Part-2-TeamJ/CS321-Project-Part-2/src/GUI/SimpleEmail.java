@@ -48,7 +48,7 @@ public class SimpleEmail
 	 * 
 	 * @param index zero-based position of the selected item in list box
 	 */
-	public void setCurrentIndex(int index)
+	public void retrieveCurrentIndex(int index)
 	{
 		m_currentIndex = index;
 	}
@@ -73,7 +73,7 @@ public class SimpleEmail
 	 * list box model, call the get function, and perform your updates on the 
 	 * returned object.)
 	 */
-	public void setListBoxModel(DefaultListModel model)
+	public void retrieveListBoxModel(DefaultListModel model)
 	{
 		m_listModel = model;
 	}
@@ -92,7 +92,7 @@ public class SimpleEmail
 	 */
 	public void composeMessage()
 	{
-		
+		MessageGUIController message = new MessageGUIController();
 	}
 	
 	/**

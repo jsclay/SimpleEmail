@@ -5,8 +5,11 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -31,17 +34,19 @@ public class MessageGUI
 	{
 		//set up the controller
 		m_controller = controller;
+		m_controller.retrieveGUIInstance(this);
 		
 		//frame
 		JFrame frame = new JFrame();
-		frame.setSize(500, 650);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(500, 635);
+		frame.setResizable(false); 
 		
 		//panels
 		JPanel topPanel = new JPanel();			//panel to hold recipient and subject panels
 		JPanel toPanel = new JPanel();			//recipient field
 		JPanel subjectPanel = new JPanel();		//subject field
 		JPanel textPanel = new JPanel();		//text body field
+		JPanel buttonPanel = new JPanel();		//send button
 		
 		//Setup panels
 			//toPanel
@@ -71,14 +76,19 @@ public class MessageGUI
 			topPanel.add(subjectPanel, c);
 			
 			//textPanel
-			JTextArea textBody = new JTextArea(32, 36);
+			JTextArea textBody = new JTextArea(31, 36);
 			JScrollPane scroll = new JScrollPane(textBody);
 			textPanel.add(scroll);
+			
+			//buttonPanel
+			JButton sendBtn = new JButton("Send");
+			buttonPanel.add(sendBtn);
 		
 		//add panels to frame
 		//frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
 		frame.add(topPanel, BorderLayout.NORTH);
 		frame.add(textPanel, BorderLayout.CENTER);
+		frame.add(buttonPanel, BorderLayout.SOUTH);
 		
 		//set frame visible
 		frame.setVisible(true);
@@ -87,27 +97,15 @@ public class MessageGUI
 			//recipient text field listener
 			toText.getDocument().addDocumentListener(new DocumentListener() {
 				public void changedUpdate(DocumentEvent e){
-					try {
-						update(e.getDocument().getText(0, e.getDocument().getLength()));
-					} catch (BadLocationException e1) {
-						e1.printStackTrace();
-					}
+					updateRecipient(toText.getText());
 				}
 				public void removeUpdate(DocumentEvent e) {
-					try {
-						update(e.getDocument().getText(0, e.getDocument().getLength()));
-					} catch (BadLocationException e1) {
-						e1.printStackTrace();
-					}
+					updateRecipient(toText.getText());
 				}
 				public void insertUpdate(DocumentEvent e) {
-					try {
-						update(e.getDocument().getText(0, e.getDocument().getLength()));
-					} catch (BadLocationException e1) {
-						e1.printStackTrace();
-					}
+					updateRecipient(toText.getText());
 				}
-				public void update(String s){
+				public void updateRecipient(String s){
 					m_controller.retrieveRecipient(s);
 				}
 			});
@@ -115,28 +113,23 @@ public class MessageGUI
 			//subject text field listener
 			subjectText.getDocument().addDocumentListener(new DocumentListener() {
 				public void changedUpdate(DocumentEvent e){
-					try {
-						update(e.getDocument().getText(0, e.getDocument().getLength()));
-					} catch (BadLocationException e1) {
-						e1.printStackTrace();
-					}
+					updateSubject(subjectText.getText());
 				}
 				public void removeUpdate(DocumentEvent e) {
-					try {
-						update(e.getDocument().getText(0, e.getDocument().getLength()));
-					} catch (BadLocationException e1) {
-						e1.printStackTrace();
-					}
+					updateSubject(subjectText.getText());
 				}
 				public void insertUpdate(DocumentEvent e) {
-					try {
-						update(e.getDocument().getText(0, e.getDocument().getLength()));
-					} catch (BadLocationException e1) {
-						e1.printStackTrace();
-					}
+					updateSubject(subjectText.getText());
 				}
-				public void update(String s){
+				public void updateSubject(String s){
 					m_controller.retrieveSubject(s);
+				}
+			});
+			
+			//send button listener
+			sendBtn.addActionListener(new ActionListener(){
+				public void actionPerformed(ActionEvent e){
+					m_controller.sendMessage(textBody.getText());
 				}
 			});
 	}

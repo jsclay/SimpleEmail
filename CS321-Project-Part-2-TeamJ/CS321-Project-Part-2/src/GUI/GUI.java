@@ -29,6 +29,7 @@ public class GUI
 			
 			//frame
 				JFrame frame = new JFrame();
+				frame.setTitle("Simple Email");
 				frame.setSize(500, 500);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -132,7 +133,7 @@ public class GUI
 			
 				
 			//pass list box model to controller
-				m_controller.setListBoxModel((DefaultListModel)list.getModel());
+				m_controller.retrieveListBoxModel((DefaultListModel)list.getModel());
 				
 			//Set up listeners 
 				//list box listener
@@ -141,7 +142,7 @@ public class GUI
 				{
 					public void valueChanged(ListSelectionEvent e)
 					{
-						m_controller.setCurrentIndex(e.getFirstIndex());
+						m_controller.retrieveCurrentIndex(e.getFirstIndex());
 					}
 				});
 				
