@@ -5,4 +5,10 @@
 <fullyQualifiedTypeName name="javax.swing.event.ListSelectionEvent"/>
 <fullyQualifiedTypeName name="Email.Email"/>
 <fullyQualifiedTypeName name="Email.Users"/>
+<fullyQualifiedTypeName name="javax.swing.DefaultListModel"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
 </qualifiedTypeNameHistroy>
