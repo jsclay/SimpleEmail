@@ -1,5 +1,3 @@
-package Email;
-
 import java.sql.Timestamp;
 
 // Author: Jennifer Berry

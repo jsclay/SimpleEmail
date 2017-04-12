@@ -1,3 +1,5 @@
+package Email;
+
 import java.util.ArrayList;
 
 // Author: Jennifer Berry
