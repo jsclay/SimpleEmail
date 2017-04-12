@@ -30,6 +30,7 @@ public class GUI
 			//frame
 				JFrame frame = new JFrame();
 				frame.setSize(500, 500);
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 			//Account combo box
 				String[] accountComboItems = {"Account", "Add Account", "Delete Account" };
